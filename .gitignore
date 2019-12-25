@@ -1,0 +1,12 @@
+src/key/
+api-test/node_modules/
+api-test/tmp/
+api-test/home-survey-project-configuration.txt
+api-test/webap-token.html
+
+.vscode/
+
+firebase-adapter/obj/
+firebase-adapter/bin/
+appsettings.Development.json
+*.key

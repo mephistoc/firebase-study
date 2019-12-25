@@ -1,0 +1,53 @@
+@access_token = putAccessTokenHere
+
+POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key={{app-key}}
+Content-Type: application/json
+
+{
+    "email":"{{email_address}}",
+    "password":"{{password}}",
+    "returnSecureToken": true
+}
+###
+
+GET https://home-surveillance-cfdc1.firebaseio.com/store-detail/.json?auth={{access_token}}
+###
+
+PUT https://home-surveillance-cfdc1.firebaseio.com/store-detail/S005.json?auth={{access_token}}
+Content-Type: application/json
+
+{
+    "city": "Kaohsiung",
+    "storeName": "Black Sirius",
+    "members": {
+        "john": {
+            "name": "John", 
+            "title": "Lady"
+        },
+        "dora": {
+            "name": "Dora", 
+            "title": "Mama"
+        }
+    }
+}
+###
+
+PUT https://home-surveillance-cfdc1.firebaseio.com/store-detail/S005/members/dora.json?auth={{access_token}}
+Content-Type: application/json
+
+{
+    "name": "Dora", 
+    "title": "Gaga"
+}
+###
+
+PATCH  https://home-surveillance-cfdc1.firebaseio.com/store-detail/S005.json?auth={{access_token}}
+Content-Content-Type: application/json
+
+{
+    "city": "Green Island"
+}
+###
+
+DELETE https://home-surveillance-cfdc1.firebaseio.com/store-detail/S005.json?auth={{access_token}}
+###

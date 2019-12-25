@@ -1,0 +1,66 @@
+@id_token = eyJhbGciOiJSUzI1NiIsImtpZCI6ImQ3NjM1YWI2NDZlMDdmZDE5OWY3NGIwMTZhOTU0MzkyMmEwY2ZmOWEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcmVhbC1lc3RhdGUtc3VydmV5IiwiYXVkIjoicmVhbC1lc3RhdGUtc3VydmV5IiwiYXV0aF90aW1lIjoxNTc3MTIwNDA5LCJ1c2VyX2lkIjoiRVV6QldHY24ycVdhYURGWmNjQ094aE1hOVpCMiIsInN1YiI6IkVVekJXR2NuMnFXYWFERlpjY0NPeGhNYTlaQjIiLCJpYXQiOjE1NzcxMjA0MDksImV4cCI6MTU3NzEyNDAwOSwiZW1haWwiOiJnZW8uY3VzdGVyMjAxOEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJnZW8uY3VzdGVyMjAxOEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.CT0b_m4KAyTfTlU7ZwognoZUswVKsM-aXhXmXcy9IF0mqEjIAGxnzadTe4VUpdOYY55y6JZuk7Kg3fg2AEn50UzzHigWSPx7hcvKa4e573MakieUk7vad3BQWK7i_yJZMfT-1mdZqOk1e1ADfTbAZl2ylBOvujM3AcWZOL5xTeLEBFBtnZNDt_1CycV2U8Xx39E3X-yaRtlpBfvBOK4-UndwgUCVf5uwFrTYKg6qQ6iJGb07V30gTz45CmRiJQEyTQQZiKQSXK_YixSV0o4SwkIe6DSjVts8W0f63JKtSDkH3Q7YEJXUR3TizqUcBQqmDnSjX58v7IudOmQxaSTpZg
+@access_token = eyJhbGciOiJSUzI1NiIsImtpZCI6ImQ3NjM1YWI2NDZlMDdmZDE5OWY3NGIwMTZhOTU0MzkyMmEwY2ZmOWEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcmVhbC1lc3RhdGUtc3VydmV5IiwiYXVkIjoicmVhbC1lc3RhdGUtc3VydmV5IiwiYXV0aF90aW1lIjoxNTc3MTIwNDA5LCJ1c2VyX2lkIjoiRVV6QldHY24ycVdhYURGWmNjQ094aE1hOVpCMiIsInN1YiI6IkVVekJXR2NuMnFXYWFERlpjY0NPeGhNYTlaQjIiLCJpYXQiOjE1NzcxMjA3MTQsImV4cCI6MTU3NzEyNDMxNCwiZW1haWwiOiJnZW8uY3VzdGVyMjAxOEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJnZW8uY3VzdGVyMjAxOEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.qAglmI-RjdnXvPI8RAY-JxQ3BjusK3H1k43_n0niHYJ430oiIXVrTV1Si_v1NNJPldglzHhebrJaCKXt9Xmk6A9B9Bb1ORyWep_Hg1VwSumNJVTn5neaaIzX_VD-E_aWDz_3xbcZCq_hWFeANeAOKq7XO5Zl9Cf5cjmeHWuCIS1SW4P7_zzhunrgAuZJulxN_4x1djF-LwbkjsjqgmYk1iRcPn1II5nXrBAGii3EVQ3fk7eBoCLwvAZWxyPTBw9eISN-R2VspSrj8Oe8H4AUxVpQ1fv24ckOqXWUxdSrNXBKH5ogLjIzym3LUTv9wY8wnEaae2Y9mYL7n3RL4-NlEg
+@email_address = 
+@password = 
+@app-key = 
+@refresh_token = AEu4IL00Lnf4Hf9R2F0yWzIzG2RskY-upQNPp46V_Vyrtz1JTjVZv1UqXL1xK-GKv6Wsq6RjSpAqxlNiKuhdjOXsgia16qn-N6dqXYMa-w788NYaqAaHLL4EIgCv5S8Y-TvshTBREGd4gApjNUKoNoZY32GSRPIfwGsAHju8Bx6GzL5OWdeFxS3peQ__irOSNpTRCViLeFUjjyeZa92x6nCLd_tWE2kxbhoW2iCgZwfK6XW0IlkVQxA
+
+POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key={{app-key}}
+Content-Type: application/json
+
+{
+    "email":"{{email_address}}",
+    "password":"{{password}}",
+    "returnSecureToken": true
+}
+###
+
+POST https://securetoken.googleapis.com/v1/token?key={{app-key}}
+Content-Type: application/json
+
+{
+  "grant_type": "refresh_token",
+  "refresh_token": "{{refresh_token}}"
+}
+
+###
+
+POST https://firestore.googleapis.com/v1beta1/projects/real-estate-survey/databases/(default)/documents:batchGet
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "documents": [
+    "projects/real-estate-survey/databases/(default)/properties"
+  ]
+}
+###
+
+POST https://firestore.googleapis.com/v1beta1/projects/real-estate-survey/databases/(default)/documents/properties:listCollectionIds
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "pageSize": 10
+}
+###
+
+POST https://firestore.googleapis.com/v1beta2/projects/properties/databases/(default):exportDocuments
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "collectionIds": [
+    "properties"
+  ],
+  "outputUriPrefix": "real-estate-survey.appspot.com"
+}
+###
+
+GET https://real-estate-survey.firebaseio.com/properties.json?orderBy="$key"
+Authorization: Bearer {{access_token}}
+###
+
+GET https://firestore.googleapis.com/v1/projects/real-estate-survey/databases/(default)/documents/.json
+Authorization: Bearer {{id_token}}
+###

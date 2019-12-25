@@ -1,0 +1,59 @@
+@access_token = eyJhbGciOiJSUzI1NiIsImtpZCI6ImQ3NjM1YWI2NDZlMDdmZDE5OWY3NGIwMTZhOTU0MzkyMmEwY2ZmOWEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcmVhbC1lc3RhdGUtc3VydmV5IiwiYXVkIjoicmVhbC1lc3RhdGUtc3VydmV5IiwiYXV0aF90aW1lIjoxNTc3MTc5NDM4LCJ1c2VyX2lkIjoiRVV6QldHY24ycVdhYURGWmNjQ094aE1hOVpCMiIsInN1YiI6IkVVekJXR2NuMnFXYWFERlpjY0NPeGhNYTlaQjIiLCJpYXQiOjE1NzcxNzk0MzgsImV4cCI6MTU3NzE4MzAzOCwiZW1haWwiOiJnZW8uY3VzdGVyMjAxOEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJnZW8uY3VzdGVyMjAxOEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.mMBLbDY__B1KVGVUEioDbf_XxglAO6-JmCqaQnckUAYtgP3j77j2qnZxe8zaEfEqsi5WXtkNJOOHh8ej1mRA-qYF4xPej2LbxsS_9GnJMeOBuXBa6D0esO-GzTFblVN2vzZt1_zyAk7j6nm6bhIJex8pSzOc4eoCMIxIqyQXl9dQ7F0sDrDzFO42gxrweOScLPD54kV6gvhTcY1SyPx4cWDS6fRL48ltteVB5Q0F1jVgrcsheWrcCX0zRhoXb7gFOu1bqzypCGu-fXTFu_7LdQVTlzfdXEgInRMcyFPI3IyeJUt4sYAQ5FgwsruwcqGsLZtaomlfw9SZy2WbDL3HJQ
+@email_address = 
+@password = 
+@app-key = 
+
+POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key={{app-key}}
+Content-Type: application/json
+
+{
+    "email":"{{email_address}}",
+    "password":"{{password}}",
+    "returnSecureToken": true
+}
+###
+
+GET https://real-estate-survey.firebaseio.com/properties.json?auth={{access_token}}
+###
+
+GET https://real-estate-survey.firebaseio.com/properties/813A0EDCEE472F8411AA20B211B93206.json?auth={{access_token}}
+###
+
+PUT https://real-estate-survey.firebaseio.com/properties/01.json?auth={{access_token}}
+Content-Type: application/json
+
+{
+    "city": "Kaohsiung",
+    "storeName": "Black Sirius",
+    "members": {
+        "john": {
+            "name": "John", 
+            "title": "Lady"
+        },
+        "dora": {
+            "name": "Dora", 
+            "title": "Mama"
+        }
+    }
+}
+###
+
+PUT https://real-estate-survey.firebaseio.com/properties/01/members/dora.json?auth={{access_token}}
+Content-Type: application/json
+
+{
+    "name": "Dora", 
+    "title": "Gaga"
+}
+###
+
+PATCH  https://real-estate-survey.firebaseio.com/properties/01.json?auth={{access_token}}
+Content-Content-Type: application/json
+
+{
+    "city": "Green Island"
+}
+###
+
+DELETE https://real-estate-survey.firebaseio.com/properties/01.json?auth={{access_token}}
+###
