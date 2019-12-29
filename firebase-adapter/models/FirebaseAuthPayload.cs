@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace firebase_adapter.Controllers{
+namespace firebase_adapter.Models{
     public class FirebaseAuthPayload
     {
 
