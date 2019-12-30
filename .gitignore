@@ -3,6 +3,7 @@ api-test/node_modules/
 api-test/tmp/
 api-test/home-survey-project-configuration.txt
 api-test/webap-token.html
+api-test/firebase-cloud-firestore-test.html
 
 .vscode/
 

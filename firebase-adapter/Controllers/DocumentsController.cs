@@ -23,14 +23,11 @@ namespace firebase_adapter.Controllers
         private IConfiguration _config;
         private FirebaseAuthPayload _firebaseAuthPayload;
         private static string App_Key = "";
-        private static string Auth_UserName = "";
-        private static string Auth_Password = "";
         private static string ID_Token = "";
         private static string Access_Token = "";
         private static string Refresh_Token = "";
         private static string AuthUrl = "";
         private static string GetDocumentsUrl = "";
-        private static string AuthPayloadJson = "{'email':'{0}','password':'{1}','returnSecureToken': true}";
 
         private static bool IsTokenTimeout = true;
 
